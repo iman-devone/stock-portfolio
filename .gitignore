@@ -1,0 +1,14 @@
+target/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local secrets (API keys etc. go here, never in git)
+.env
+application-local.yaml

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stock Portfolio</title>
+    <link rel="stylesheet" th:href="@{/css/app.css}">
+</head>
+<body>
+<main>
+    <h1>Stock Portfolio</h1>
+    <p class="lead">Step 1 done: the skeleton is up and running.</p>
+
+    <section class="card">
+        <h2>System</h2>
+        <dl>
+            <dt>Java</dt>
+            <dd th:text="${javaVersion}">25</dd>
+            <dt>Spring Boot</dt>
+            <dd th:text="${springBootVersion}">4.1.1</dd>
+            <dt>Database</dt>
+            <dd th:if="${databaseVersion}" class="ok" th:text="|PostgreSQL ${databaseVersion}|">PostgreSQL 18</dd>
+            <dd th:unless="${databaseVersion}" class="error">Not reachable. Is Docker running?</dd>
+        </dl>
+    </section>
+
+    <section class="card">
+        <h2>Next</h2>
+        <p>Step 2: watchlist. Add and remove the stocks and gold you want to follow.</p>
+    </section>
+</main>
+</body>
+</html>
